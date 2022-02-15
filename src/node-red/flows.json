@@ -1,0 +1,2758 @@
+[
+    {
+        "id": "d7438a40.89ddf8",
+        "type": "tab",
+        "label": "Bus",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7b2db111.9de9a",
+        "type": "tab",
+        "label": "Lighting Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "53291942.d1a028",
+        "type": "tab",
+        "label": "Environmental",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8630008e.6b51d",
+        "type": "tab",
+        "label": "House",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "416b567426c6c33f",
+        "type": "subflow",
+        "name": "Light Switch - Dimmable/Slider (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "4f9b1d7198012312"
+                    },
+                    {
+                        "id": "df1b1f92d1f2c5e9"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 800,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "df1b1f92d1f2c5e9",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "light_id",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "be7fa6ad.ebd5c8",
+        "type": "subflow",
+        "name": "Light Switch - Dimmable/Slider",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "708402de.7b8e9c"
+                    },
+                    {
+                        "id": "529944ee.66b1fc"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 800,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "529944ee.66b1fc",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "light_id",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "6d15e4f205332607",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "da2b2b4c.ab2538",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "588eb1d43d395694",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2304b0553929d460",
+        "type": "ui_tab",
+        "name": "Bus",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "63a3671dd4c8ba80",
+        "type": "ui_tab",
+        "name": "Environmental",
+        "icon": "dashboard",
+        "order": 4
+    },
+    {
+        "id": "2d4f0ca49ef2e269",
+        "type": "ui_group",
+        "z": "416b567426c6c33f",
+        "name": "Switch",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6e149f95e03bdfe1",
+        "type": "ui_group",
+        "name": "Temperatures",
+        "tab": "2304b0553929d460",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "0d7d49f6f54f9a2f",
+        "type": "ui_group",
+        "name": "Outside",
+        "tab": "63a3671dd4c8ba80",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c6780793547a9512",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7c2c69123ab860a7",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "197d7518064fb9b9",
+        "type": "ui_group",
+        "name": "Pressures",
+        "tab": "2304b0553929d460",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "92f71e6e2b80de04",
+        "type": "ui_group",
+        "name": "Levels",
+        "tab": "2304b0553929d460",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e5043eb820db37b8",
+        "type": "ui_group",
+        "name": "Weather",
+        "tab": "63a3671dd4c8ba80",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bd623e129901ee14",
+        "type": "ui_group",
+        "name": "Inside",
+        "tab": "1594cbc5.10833c",
+        "order": null,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c847c171126dba12",
+        "type": "ui_group",
+        "name": "767c2f9.8d7da5",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "8177ad79ac880b51",
+        "type": "ui_group",
+        "name": "d543b870.c95fd8",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "b1fefe0afc2d3f19",
+        "type": "ui_group",
+        "name": "dd3ff94e.a102b8",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "860453f839dcbd11",
+        "type": "ui_group",
+        "name": "8c344d30.7065a8",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "94b886857522c182",
+        "type": "ui_group",
+        "name": "b93682ac.13f43",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "43f0231ac2bbde6b",
+        "type": "ui_group",
+        "name": "31859d97.5f8032",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "c06a29d32c308106",
+        "type": "ui_group",
+        "name": "8155c4b5.333b4",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "493c9f6760b43083",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "56a93c05.51b9ec",
+        "type": "ui_group",
+        "z": "be7fa6ad.ebd5c8",
+        "name": "Switch",
+        "tab": "a137ff35.fea798",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6ce45bce.cdff94",
+        "type": "PCA9685",
+        "deviceNumber": "1",
+        "address": "64",
+        "frequency": "60"
+    },
+    {
+        "id": "f3ae2a91.2f9678",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Bus Control Panel",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6ac1bf78.6a895",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a137ff35.fea798",
+        "type": "ui_tab",
+        "name": "Lighting",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1e35acaa.07523b",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "da2b2b4c.ab2538",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "99303d85.08bfb",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "6ac1bf78.6a895",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "61548455.ddddfc",
+        "type": "ui_tab",
+        "name": "Bus",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1594cbc5.10833c",
+        "type": "ui_tab",
+        "name": "Environmental",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "767c2f9.8d7da5",
+        "type": "ui_group",
+        "name": "Temperatures",
+        "tab": "61548455.ddddfc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8c344d30.7065a8",
+        "type": "ui_group",
+        "name": "Outside",
+        "tab": "1594cbc5.10833c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "acd56bcb.95eb8",
+        "type": "ui_tab",
+        "name": "House",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "31859d97.5f8032",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "acd56bcb.95eb8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8155c4b5.333b4",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dd3ff94e.a102b8",
+        "type": "ui_group",
+        "name": "Pressures",
+        "tab": "61548455.ddddfc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d543b870.c95fd8",
+        "type": "ui_group",
+        "name": "Levels",
+        "tab": "61548455.ddddfc",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b93682ac.13f43",
+        "type": "ui_group",
+        "name": "Weather",
+        "tab": "1594cbc5.10833c",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fceea259f53fb94b",
+        "type": "mqtt-broker",
+        "name": "local",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "df1b1f92d1f2c5e9",
+        "type": "ui_slider",
+        "z": "416b567426c6c33f",
+        "name": "",
+        "group": "bd623e129901ee14",
+        "order": 15,
+        "topic": "${light_id}",
+        "min": 0,
+        "max": "100",
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "8f3d8d9cd0542f0e"
+            ]
+        ]
+    },
+    {
+        "id": "4f9b1d7198012312",
+        "type": "ui_switch",
+        "z": "416b567426c6c33f",
+        "name": "",
+        "group": "bd623e129901ee14",
+        "order": 8,
+        "topic": "",
+        "onvalue": "100",
+        "offvalue": "0",
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "df1b1f92d1f2c5e9"
+            ]
+        ]
+    },
+    {
+        "id": "9e4d150bae7b3f5d",
+        "type": "change",
+        "z": "416b567426c6c33f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "4f9b1d7198012312"
+            ]
+        ]
+    },
+    {
+        "id": "8f3d8d9cd0542f0e",
+        "type": "switch",
+        "z": "416b567426c6c33f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 60,
+        "wires": [
+            [
+                "9e4d150bae7b3f5d"
+            ],
+            [
+                "69b7876786b050dd"
+            ]
+        ]
+    },
+    {
+        "id": "69b7876786b050dd",
+        "type": "change",
+        "z": "416b567426c6c33f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "4f9b1d7198012312"
+            ]
+        ]
+    },
+    {
+        "id": "529944ee.66b1fc",
+        "type": "ui_slider",
+        "z": "be7fa6ad.ebd5c8",
+        "name": "",
+        "label": "${light_id}",
+        "tooltip": "",
+        "group": "56a93c05.51b9ec",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "${light_id}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "28e2af2a.3d494"
+            ]
+        ]
+    },
+    {
+        "id": "708402de.7b8e9c",
+        "type": "ui_switch",
+        "z": "be7fa6ad.ebd5c8",
+        "name": "",
+        "label": "${light_id}",
+        "tooltip": "",
+        "group": "56a93c05.51b9ec",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "100",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "529944ee.66b1fc"
+            ]
+        ]
+    },
+    {
+        "id": "6ab88e4b.6ffb68",
+        "type": "change",
+        "z": "be7fa6ad.ebd5c8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "708402de.7b8e9c"
+            ]
+        ]
+    },
+    {
+        "id": "28e2af2a.3d494",
+        "type": "switch",
+        "z": "be7fa6ad.ebd5c8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 60,
+        "wires": [
+            [
+                "6ab88e4b.6ffb68"
+            ],
+            [
+                "34e37b54.f5f384"
+            ]
+        ]
+    },
+    {
+        "id": "34e37b54.f5f384",
+        "type": "change",
+        "z": "be7fa6ad.ebd5c8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "708402de.7b8e9c"
+            ]
+        ]
+    },
+    {
+        "id": "6652c846.fc6d1",
+        "type": "ui_gauge",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "group": "767c2f9.8d7da5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Water",
+        "label": "F",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "120",
+        "seg2": "135",
+        "x": 230,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e7ff4650.ebc278",
+        "type": "ui_gauge",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "group": "d543b870.c95fd8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Fuel",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "30740fbe.32aa98",
+        "type": "ui_gauge",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "group": "dd3ff94e.a102b8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Air",
+        "label": "PSI",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "150",
+        "colors": [
+            "#b40101",
+            "#e6e600",
+            "#02ff3c"
+        ],
+        "seg1": "90",
+        "seg2": "100",
+        "x": 390,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "82fafc7f.d16608",
+        "type": "ui_gauge",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "group": "767c2f9.8d7da5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Oil",
+        "label": "F",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f0cb06e3.ff9f58",
+        "type": "ui_gauge",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "group": "767c2f9.8d7da5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Trans",
+        "label": "F",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 230,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e8a19b65.11df18",
+        "type": "inject",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "6652c846.fc6d1",
+                "30740fbe.32aa98",
+                "c46e33d9.139228"
+            ]
+        ]
+    },
+    {
+        "id": "aa30b099.0ed1a",
+        "type": "inject",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "40",
+        "payloadType": "num",
+        "x": 91.88333129882812,
+        "y": 79.88333129882812,
+        "wires": [
+            [
+                "6652c846.fc6d1",
+                "30740fbe.32aa98",
+                "c46e33d9.139228"
+            ]
+        ]
+    },
+    {
+        "id": "6a210642.01a738",
+        "type": "inject",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "6652c846.fc6d1",
+                "30740fbe.32aa98"
+            ]
+        ]
+    },
+    {
+        "id": "4a6585ba.8842d4",
+        "type": "inject",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "120",
+        "payloadType": "num",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "6652c846.fc6d1",
+                "30740fbe.32aa98"
+            ]
+        ]
+    },
+    {
+        "id": "ff4eee5e.553e98",
+        "type": "inject",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "130",
+        "payloadType": "num",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "6652c846.fc6d1",
+                "30740fbe.32aa98"
+            ]
+        ]
+    },
+    {
+        "id": "1d10e65e.9d31aa",
+        "type": "inject",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "160",
+        "payloadType": "num",
+        "x": 90,
+        "y": 280,
+        "wires": [
+            [
+                "6652c846.fc6d1",
+                "30740fbe.32aa98"
+            ]
+        ]
+    },
+    {
+        "id": "c46e33d9.139228",
+        "type": "ui_gauge",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "group": "dd3ff94e.a102b8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Oil",
+        "label": "PSI",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "65",
+        "colors": [
+            "#b40101",
+            "#e6e600",
+            "#02ff3c"
+        ],
+        "seg1": "30",
+        "seg2": "35",
+        "x": 390,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "33532508.fae3c2",
+        "type": "inject",
+        "z": "d7438a40.89ddf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "num",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "c46e33d9.139228"
+            ]
+        ]
+    },
+    {
+        "id": "46bd9273.6b279c",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 15 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "15",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d11db9bf.d2cc58",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 11 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "11",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a1db78a3.adab88",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 14 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "14",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "2845eae8.8cf5e6",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 13 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "13",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "60fdd5d3.6508cc",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 12 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "12",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d9cd6323.11234",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 10 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "10",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e12deab0.58d3e8",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 9 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "9",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "7a7aa685.b9ec08",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 8 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "8",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e9f746e5.569778",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 7 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "7",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "bcd1449f.2b916",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 6 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "6",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "eafbb998.fac2b8",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 5 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "5",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c4d9c9c8.163f88",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 4 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "4",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "826350c9.96f908",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 3 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "3",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "e1b1a570.3f4e",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 2 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "2",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "45266660.5387",
+        "type": "PCA9685 out",
+        "z": "7b2db111.9de9a",
+        "name": "PWM Output 1 (Led)",
+        "pca9685": "6ce45bce.cdff94",
+        "channel": "1",
+        "payload": "msg.payload",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "4d6beb4f.6f8274",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "03-12",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 280,
+        "wires": [
+            [
+                "46bd9273.6b279c"
+            ]
+        ]
+    },
+    {
+        "id": "f6c11b63.767df8",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "03-13",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 320,
+        "wires": [
+            [
+                "a1db78a3.adab88"
+            ]
+        ]
+    },
+    {
+        "id": "fbf76bbf.1d55",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-000000455f06_gpio_0",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 360,
+        "wires": [
+            [
+                "2845eae8.8cf5e6"
+            ]
+        ]
+    },
+    {
+        "id": "77e02afa.4bcfd4",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-000000455f06_gpio_1",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 400,
+        "wires": [
+            [
+                "60fdd5d3.6508cc"
+            ]
+        ]
+    },
+    {
+        "id": "dba38176.619268",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-000000456015_gpio_0",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 440,
+        "wires": [
+            [
+                "d11db9bf.d2cc58"
+            ]
+        ]
+    },
+    {
+        "id": "e29bca1c.5ec678",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-000000456015_gpio_1",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 480,
+        "wires": [
+            [
+                "d9cd6323.11234"
+            ]
+        ]
+    },
+    {
+        "id": "c80f42fc.586e8",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-00000045614b_gpio_0",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 520,
+        "wires": [
+            [
+                "e12deab0.58d3e8"
+            ]
+        ]
+    },
+    {
+        "id": "ae804e6a.0b267",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-00000045614b_gpio_1",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 560,
+        "wires": [
+            [
+                "7a7aa685.b9ec08"
+            ]
+        ]
+    },
+    {
+        "id": "9085e9ff.985b78",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-0000004563a7_gpio_0",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 600,
+        "wires": [
+            [
+                "e9f746e5.569778"
+            ]
+        ]
+    },
+    {
+        "id": "c6bf0209.a5b838",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-0000004563a7_gpio_1",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 640,
+        "wires": [
+            [
+                "bcd1449f.2b916"
+            ]
+        ]
+    },
+    {
+        "id": "d3c30e62.60f69",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-000000456520_gpio_1",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 680,
+        "wires": [
+            [
+                "eafbb998.fac2b8"
+            ]
+        ]
+    },
+    {
+        "id": "e43a3153.3fd11",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-0000004565e3_gpio_0",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 720,
+        "wires": [
+            [
+                "c4d9c9c8.163f88"
+            ]
+        ]
+    },
+    {
+        "id": "43551f12.407ba",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-0000004565e3_gpio_1",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 760,
+        "wires": [
+            [
+                "826350c9.96f908"
+            ]
+        ]
+    },
+    {
+        "id": "7e399efe.2adc3",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-00000045660e_gpio_0",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 800,
+        "wires": [
+            [
+                "e1b1a570.3f4e"
+            ]
+        ]
+    },
+    {
+        "id": "9eec5adc95be657b",
+        "type": "mqtt in",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "topic": "switches",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "fceea259f53fb94b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "88098125fc7cf7aa"
+            ]
+        ]
+    },
+    {
+        "id": "88098125fc7cf7aa",
+        "type": "json",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 230,
+        "y": 40,
+        "wires": [
+            [
+                "506102f80efd29be"
+            ]
+        ]
+    },
+    {
+        "id": "506102f80efd29be",
+        "type": "function",
+        "z": "7b2db111.9de9a",
+        "name": "Store pin state",
+        "func": "var pin_states_old = flow.get('pin_states_old') || [];\nvar pin_states = flow.get('pin_states')  || [];\npin_states_old = pin_states;\npin_states = msg.payload.mcp;\nflow.set('pin_states_old', pin_states_old);\nflow.set('pin_states', pin_states);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "4536d543acd79736"
+            ]
+        ]
+    },
+    {
+        "id": "c2a5c040b942a935",
+        "type": "switch",
+        "z": "7b2db111.9de9a",
+        "name": "Split MCP",
+        "property": "mcp",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 140,
+        "y": 580,
+        "wires": [
+            [
+                "fc817497e1a327ea"
+            ],
+            [
+                "36f1a1c248e83b6c"
+            ],
+            [
+                "e0dcb82da602f8b5"
+            ],
+            [
+                "84a4b3524c8c7327"
+            ]
+        ]
+    },
+    {
+        "id": "84a4b3524c8c7327",
+        "type": "switch",
+        "z": "7b2db111.9de9a",
+        "name": "Split switch",
+        "property": "switch",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 16,
+        "x": 350,
+        "y": 1060,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4536d543acd79736",
+        "type": "function",
+        "z": "7b2db111.9de9a",
+        "name": "Toggle switch",
+        "func": "var switch_states_old = flow.get('switch_states')  || [];\nvar switch_states = flow.get('switch_states')  || [];\nvar pin_states_old = flow.get('pin_states_old')  || [];\nvar pin_states = flow.get('pin_states')  || [];\n\n// Update old switch states with current switch states \nflow.set('switch_states_old', switch_states_old);\n\nfor (var i=0; i<pin_states.length; i++)\n{\n    for (var j=0; j<pin_states[i].length; j++)\n    {\n        // State has changed\n        if (pin_states_old[i][j] != pin_states[i][j])\n        {\n            if (pin_states[i][j] > 0) {\n                // Toggle switch on/off\n                if (switch_states[i][j] > 0)\n                {\n                    node.warn(\"off\");\n                    switch_states[i][j] = 0;\n                }\n                else\n                {\n                    node.warn(\"on\");\n                    switch_states[i][j] = 100;\n                }\n            }\n\n            var newMsg = {};\n            newMsg.topic = \"switch_state\";\n            newMsg.payload = switch_states[i][j];\n            newMsg.mcp = i;\n            newMsg.switch = j;\n            node.send(newMsg);\n\n        }\n    }\n}\n\nflow.set('switch_states', switch_states);\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 40,
+        "wires": [
+            [
+                "c2a5c040b942a935"
+            ]
+        ]
+    },
+    {
+        "id": "8fc2374f1bd02fd3",
+        "type": "subflow:be7fa6ad.ebd5c8",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "env": [
+            {
+                "name": "light_id",
+                "value": "3a-00000045660e_gpio_0",
+                "type": "str"
+            },
+            {
+                "name": "Light ID",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            },
+            {
+                "name": "test",
+                "value": "3A.005A46000000/sensed.A",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 840,
+        "wires": [
+            [
+                "45266660.5387"
+            ]
+        ]
+    },
+    {
+        "id": "36f1a1c248e83b6c",
+        "type": "switch",
+        "z": "7b2db111.9de9a",
+        "name": "Split switch",
+        "property": "switch",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 16,
+        "x": 350,
+        "y": 520,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fc817497e1a327ea",
+        "type": "switch",
+        "z": "7b2db111.9de9a",
+        "name": "Split switch",
+        "property": "switch",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 16,
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "4d6beb4f.6f8274"
+            ],
+            [
+                "f6c11b63.767df8"
+            ],
+            [
+                "fbf76bbf.1d55"
+            ],
+            [
+                "77e02afa.4bcfd4"
+            ],
+            [
+                "dba38176.619268"
+            ],
+            [
+                "e29bca1c.5ec678"
+            ],
+            [
+                "c80f42fc.586e8"
+            ],
+            [
+                "9085e9ff.985b78"
+            ],
+            [
+                "c6bf0209.a5b838"
+            ],
+            [
+                "d3c30e62.60f69"
+            ],
+            [
+                "e43a3153.3fd11"
+            ],
+            [
+                "43551f12.407ba"
+            ],
+            [
+                "7e399efe.2adc3"
+            ],
+            [
+                "8fc2374f1bd02fd3"
+            ],
+            [
+                "ae804e6a.0b267"
+            ],
+            [
+                "8fc2374f1bd02fd3"
+            ]
+        ]
+    },
+    {
+        "id": "e0dcb82da602f8b5",
+        "type": "switch",
+        "z": "7b2db111.9de9a",
+        "name": "Split switch",
+        "property": "switch",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 16,
+        "x": 350,
+        "y": 780,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "79306344.c54c64",
+        "type": "ui_gauge",
+        "z": "53291942.d1a028",
+        "name": "",
+        "group": "8c344d30.7065a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 260,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "69352f72.ae53c8",
+        "type": "ui_template",
+        "z": "53291942.d1a028",
+        "group": "b93682ac.13f43",
+        "name": "Weather",
+        "order": 2,
+        "width": "6",
+        "height": "7",
+        "format": "<a class=\"weatherwidget-io\" href=\"https://forecast7.com/en/40d71n74d01/new-york/\" data-label_1=\"NEW YORK\" data-label_2=\"WEATHER\" data-theme=\"original\" >NEW YORK WEATHER</a>\n<script>\n!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 540,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "efe767d6.26ce98",
+        "type": "ui_gauge",
+        "z": "53291942.d1a028",
+        "name": "",
+        "group": "8c344d30.7065a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Light Level",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 270,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "37e3f32282716c78",
+        "type": "mqtt in",
+        "z": "53291942.d1a028",
+        "name": "",
+        "topic": "temperature",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "fceea259f53fb94b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "25e6f5eced055822"
+            ]
+        ]
+    },
+    {
+        "id": "d9bcd4793df7f8ab",
+        "type": "debug",
+        "z": "53291942.d1a028",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "25e6f5eced055822",
+        "type": "json",
+        "z": "53291942.d1a028",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "b9a401cc49a9cf17",
+                "d9bcd4793df7f8ab"
+            ]
+        ]
+    },
+    {
+        "id": "b9a401cc49a9cf17",
+        "type": "function",
+        "z": "53291942.d1a028",
+        "name": "",
+        "func": "msg.payload = msg.payload.fahrenheit;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "d9bcd4793df7f8ab",
+                "78abff10e747e3aa",
+                "51b9e2123b6ab717"
+            ]
+        ]
+    },
+    {
+        "id": "78abff10e747e3aa",
+        "type": "ui_chart",
+        "z": "53291942.d1a028",
+        "name": "",
+        "group": "8c344d30.7065a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 830,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51b9e2123b6ab717",
+        "type": "ui_chart",
+        "z": "53291942.d1a028",
+        "name": "",
+        "group": "bd623e129901ee14",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f607c8be.4e3cf",
+        "type": "ui_gauge",
+        "z": "8630008e.6b51d",
+        "name": "",
+        "group": "31859d97.5f8032",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Waste Tank Level",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "77ab615f.4935c",
+        "type": "ui_gauge",
+        "z": "8630008e.6b51d",
+        "name": "",
+        "group": "31859d97.5f8032",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Water Level",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    }
+]
