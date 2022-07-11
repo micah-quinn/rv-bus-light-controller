@@ -17,7 +17,7 @@ WiFiClient client;
 void WiFiEvent(WiFiEvent_t event);
 
 // MQTT setup
-const char MQTTserver[] = "10.0.0.147";
+const char MQTTserver[] = "10.0.0.66";
 int        MQTTport = 1883;
 
 static bool mqtt_connected = false;

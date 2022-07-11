@@ -1863,7 +1863,8 @@
         "y": 40,
         "wires": [
             [
-                "506102f80efd29be"
+                "506102f80efd29be",
+                "9c2887eaa1b2dceb"
             ]
         ]
     },
@@ -2053,17 +2054,18 @@
         "type": "function",
         "z": "7b2db111.9de9a",
         "name": "Toggle switch",
-        "func": "var switch_states_old = flow.get('switch_states')  || [];\nvar switch_states = flow.get('switch_states')  || [];\nvar pin_states_old = flow.get('pin_states_old')  || [];\nvar pin_states = flow.get('pin_states')  || [];\n\n// Update old switch states with current switch states \nflow.set('switch_states_old', switch_states_old);\n\nfor (var i=0; i<pin_states.length; i++)\n{\n    for (var j=0; j<pin_states[i].length; j++)\n    {\n        // State has changed\n        if (pin_states_old[i][j] != pin_states[i][j])\n        {\n            if (pin_states[i][j] > 0) {\n                // Toggle switch on/off\n                if (switch_states[i][j] > 0)\n                {\n                    node.warn(\"off\");\n                    switch_states[i][j] = 0;\n                }\n                else\n                {\n                    node.warn(\"on\");\n                    switch_states[i][j] = 100;\n                }\n            }\n\n            var newMsg = {};\n            newMsg.topic = \"switch_state\";\n            newMsg.payload = switch_states[i][j];\n            newMsg.mcp = i;\n            newMsg.switch = j;\n            node.send(newMsg);\n\n        }\n    }\n}\n\nflow.set('switch_states', switch_states);\n\n\nreturn msg;",
+        "func": "var switch_states_old = flow.get('switch_states')  || [];\nvar switch_states = flow.get('switch_states')  || [];\nvar pin_states_old = flow.get('pin_states_old')  || [];\nvar pin_states = flow.get('pin_states')  || [];\nvar send_update = false;\n\n// Update old switch states with current switch states \nflow.set('switch_states_old', switch_states_old);\n\n//node.warn(pin_states.length);\n//node.warn(pin_states[0].length);\n//node.warn(pin_states[1].length);\n//node.warn(pin_states[2].length);\n//node.warn(pin_states[3].length);\n\nnode.warn(pin_states.length);\nnode.warn(pin_states[0].length);\n\n// See if pin states have changed\nfor (var i=0; i<pin_states.length; i++)\n{\n    \n    for (var j=0; j<pin_states[i].length; j++)\n    {\n        // State has changed\n        if (pin_states_old[i][j] != pin_states[i][j])\n        {\n\n            // Fix-up switch states        \n            if (pin_states[i][j] > 0) {\n                // Toggle switch on/off\n                if (switch_states[i][j] > 0)\n                {\n                    //node.warn(\"off\");\n                    switch_states[i][j] = 0;\n                }\n                else\n                {\n                    //node.warn(\"on\");\n                    switch_states[i][j] = 100;\n                }\n            }\n            \n            var newMsg = {};\n            newMsg.topic = \"switch_state\";\n            newMsg.payload = switch_states[i][j];\n            newMsg.mcp = i;\n            newMsg.switch = j;\n            node.send(newMsg);\n            node.warn(\"Sending new msg\");\n        }\n        \n    }\n    \n}\n\n\nflow.set('switch_states', switch_states);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar rows = 4;\nvar columns = 16;\n\nvar switch_states = [];\n\nfill2DimensionsArray(switch_states, rows, columns);\n\nflow.set('switch_states', switch_states);\n\nfunction fill2DimensionsArray(arr, rows, columns){\n    for (var i = 0; i < rows; i++) {\n        arr.push([0])\n        for (var j = 0; j < columns; j++) {\n            arr[i][j] = 0;\n        }\n    }\n}\n",
         "finalize": "",
         "libs": [],
         "x": 560,
         "y": 40,
         "wires": [
             [
-                "c2a5c040b942a935"
+                "c2a5c040b942a935",
+                "9c2887eaa1b2dceb"
             ]
         ]
     },
@@ -2467,6 +2469,22 @@
             [],
             []
         ]
+    },
+    {
+        "id": "9c2887eaa1b2dceb",
+        "type": "debug",
+        "z": "7b2db111.9de9a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1120,
+        "wires": []
     },
     {
         "id": "79306344.c54c64",
