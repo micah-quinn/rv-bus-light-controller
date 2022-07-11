@@ -43,9 +43,9 @@ void setRGB(int R, int G, int B)
   mcp23017[3].pinMode(5, OUTPUT);
 
   // 7=R, 6=G, 5=B
-   mcp23017[3].digitalWrite(7,R);
-   mcp23017[3].digitalWrite(6,G);
-   mcp23017[3].digitalWrite(5,B);
+  mcp23017[3].digitalWrite(7, R);
+  mcp23017[3].digitalWrite(6, G);
+  mcp23017[3].digitalWrite(5, B);
 }
 
 bool sendMQTTMessage(String topic, const String &message)
@@ -62,15 +62,16 @@ bool sendMQTTMessage(String topic, const String &message)
         Serial.print("MQTT connection failed! Error code = ");
         Serial.println(mqttClient.connectError());
       }
-    }  
+    }
 
     // Send the message
-    if (mqtt_connected)
+    if (mqtt_connected){
       mqttClient.beginMessage(topic);
       mqttClient.print(message);
-      mqttClient.endMessage();
+      mqttClient.endMessage();      
       return true;
     }
+  }
 
   return false;
 }
@@ -87,18 +88,18 @@ void setup()
   Serial.println("Initializing MCP23017 array...\n");
 
   // Initialize the MCP23017 chips (mass GPIO)
-  for (int i=0; i<NUMBER_OF_MCP23017; i++)
+  for (int i = 0; i < NUMBER_OF_MCP23017; i++)
   {
     Serial.print("Initializing MCP23017 ");
-    Serial.println(0x20+i, DEC);
-    if (!mcp23017[i].begin_I2C(0x20+i)) {
+    Serial.println(0x20 + i, DEC);
+    if (!mcp23017[i].begin_I2C(0x20 + i)) {
       Serial.print("ERROR: Could not initialize MCP23017 at addr: ");
-      Serial.println(0x20+i, DEC);
+      Serial.println(0x20 + i, DEC);
       setupSuccess = false;
     }
     else {
-      for (int pin=0; pin<NUMBER_OF_PINS; pin++) {
-        if (i==3 && pin >= 5 && pin <= 7) {
+      for (int pin = 0; pin < NUMBER_OF_PINS; pin++) {
+        if (i == 3 && pin >= 5 && pin <= 7) {
         }
         else {
           mcp23017[i].pinMode(pin, INPUT_PULLUP);
@@ -106,11 +107,11 @@ void setup()
       }
     }
     Serial.print("MCP23017 initialized at addr: ");
-    Serial.println(0x20+i, DEC);
+    Serial.println(0x20 + i, DEC);
   }
-  
+
   setRGB(HIGH, LOW, HIGH);  // Purple
-  
+
   delay(1000);
 
   // Start network
@@ -128,8 +129,8 @@ void setup()
   delay(1000);
 
   // Loop through each temp sensor, print out address
-  for(int i=0;i<numberOfTempSensors; i++) {
-    if(tempsensors.getAddress(tempDeviceAddress, i)) {
+  for (int i = 0; i < numberOfTempSensors; i++) {
+    if (tempsensors.getAddress(tempDeviceAddress, i)) {
       Serial.print("   ");
       Serial.print(i, DEC);
       Serial.print(" Addr: ");
@@ -162,18 +163,18 @@ void setup()
 void loop()
 {
 
-  if (millis()-tempPreviousReadTime > tempReadInterval) {
+  if (millis() - tempPreviousReadTime > tempReadInterval) {
     tempsensors.requestTemperatures();
- 
+
     // Loop through each device, print out temperature data
-    for(int i=0;i<numberOfTempSensors; i++) {
+    for (int i = 0; i < numberOfTempSensors; i++) {
       // Search the wire for address
-      if(tempsensors.getAddress(tempDeviceAddress, i)){
-      
+      if (tempsensors.getAddress(tempDeviceAddress, i)) {
+
         // Output the device ID
         Serial.print("Temperature for device: ");
-        Serial.println(i,DEC);
-    
+        Serial.println(i, DEC);
+
         // Print the data
         float tempC = tempsensors.getTempC(tempDeviceAddress);
         Serial.print("Temp C: ");
@@ -188,16 +189,17 @@ void loop()
         serializeJson(tempMessage, mqttMessage);
 
         sendMQTTMessage("temperature", mqttMessage);
-      }   
+      }
     }
     tempPreviousReadTime = millis();
   }
 
   // Read switches
-  for (int i=0; i<NUMBER_OF_MCP23017; i++)
+  for (int i = 0; i < NUMBER_OF_MCP23017; i++)
   {
-    for (int pin=0; pin<NUMBER_OF_PINS; pin++) {
-      if (i==3 && pin >= 5 && pin <= 7) {
+    for (int pin = 0; pin < NUMBER_OF_PINS; pin++) {
+      // The RGB LED on the PCB
+      if (i == 3 && pin >= 5 && pin <= 7) {
         switch (pin)
         {
           case 5:
@@ -206,12 +208,12 @@ void loop()
           case 6:
             pressed[i][pin] = 'G';
             break;
-          case 7:          
+          case 7:
             pressed[i][pin] = 'R';
             break;
         }
-       }
-       else {
+      }
+      else {
         pressed[i][pin] = mcp23017[i].digitalRead(pin);
       }
     }
@@ -222,27 +224,27 @@ void loop()
   {
     // Build message
     DynamicJsonDocument switchMessage(2048);
-    for (int i=0; i<NUMBER_OF_MCP23017; i++)
+    for (int i = 0; i < NUMBER_OF_MCP23017; i++)
     {
-      for (int pin=0; pin<NUMBER_OF_PINS; pin++) {
+      for (int pin = 0; pin < NUMBER_OF_PINS; pin++) {
         switchMessage["mcp"][i][pin] = pressed[i][pin];
-      }        
+      }
     }
 
     String mqttMessage;
     serializeJson(switchMessage, mqttMessage);
     sendMQTTMessage("switches", mqttMessage);
 
-    for (int i=0; i< NUMBER_OF_MCP23017; i++)
+    for (int i = 0; i < NUMBER_OF_MCP23017; i++)
     {
       Serial.print("MCP");
-      Serial.print(20+i, DEC);
+      Serial.print(20 + i, DEC);
       Serial.println(":");
-      for (int pin=0; pin<NUMBER_OF_PINS; pin++) {
+      for (int pin = 0; pin < NUMBER_OF_PINS; pin++) {
         Serial.print(pressed[i][pin]);
       }
       Serial.println("");
-      for (int pin=0; pin<NUMBER_OF_PINS; pin++) {
+      for (int pin = 0; pin < NUMBER_OF_PINS; pin++) {
         Serial.print(oldPressed[i][pin]);
       }
       Serial.println("");
@@ -250,19 +252,19 @@ void loop()
 
 
     // Flash LED and update oldPressed
-    setRGB(LOW,LOW,HIGH);
+    setRGB(LOW, LOW, HIGH);
     memcpy(oldPressed, pressed, sizeof(pressed));
 
 
   }
   else {
-    setRGB(LOW,HIGH,LOW);  // Green
+    setRGB(LOW, HIGH, LOW); // Green
   }
 
   // Read MQTT messages
   if (mqtt_connected) {
-    mqttClient.poll();  
+    mqttClient.poll();
   }
 
-  
+
 }

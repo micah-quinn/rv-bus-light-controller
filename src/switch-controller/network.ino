@@ -5,7 +5,7 @@ void WiFiEvent(WiFiEvent_t event)
     case SYSTEM_EVENT_ETH_START:
       Serial.println("ETH Started");
       //set eth hostname here
-      ETH.setHostname("esp32-ethernet");
+      ETH.setHostname("bus-switch");
       break;
     case SYSTEM_EVENT_ETH_CONNECTED:
       Serial.println("ETH Connected");
@@ -26,10 +26,12 @@ void WiFiEvent(WiFiEvent_t event)
     case SYSTEM_EVENT_ETH_DISCONNECTED:
       Serial.println("ETH Disconnected");
       eth_connected = false;
+      mqtt_connected = false;
       break;
     case SYSTEM_EVENT_ETH_STOP:
       Serial.println("ETH Stopped");
       eth_connected = false;
+      mqtt_connected = false;
       break;
     default:
       break;
